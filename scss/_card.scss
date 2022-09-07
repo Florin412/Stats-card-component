@@ -1,0 +1,81 @@
+@use "variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 554px));
+  margin: 2rem;
+
+  // Content Section
+  .content-section {
+    width: 100%;
+    min-height: 100%;
+    background-color: $dark-desaturated-blue;
+    border-radius: $radius 0 0 $radius;
+    padding: 2rem 4.5rem;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .title {
+      font-size: 2.2rem;
+      word-spacing: 2px;
+      color: $white;
+
+      .violet-word {
+        color: $soft-violet;
+      }
+    }
+
+    .description {
+      font-weight: 400;
+      color: $slightly-transparent-white-p;
+      line-height: 1.6;
+    }
+
+    .stats-box {
+      margin-top: 1.3rem;
+      display: flex;
+      gap: 4rem;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        color: $slightly-transparent-white-h;
+
+        .bold-word {
+          font-weight: 700;
+          font-size: 1.4rem;
+          font-family: "Inter", sans-serif;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  // Image Section
+  .img-section {
+    width: 100%;
+    min-height: 100%;
+    background-color: $soft-violet;
+    border-radius: 0 $radius $radius 0;
+
+    .img-mobile {
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: multiply;
+      display: none;
+    }
+
+    .img-desktop {
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: multiply;
+    }
+  }
+}
