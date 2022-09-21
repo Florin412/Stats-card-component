@@ -1,0 +1,11 @@
+@keyframes show_left {
+  from {
+    transform: translateX(200vh);
+  }
+}
+
+@keyframes show_right {
+  from {
+    transform: translateX(-200vh);
+  }
+}

@@ -18,6 +18,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 554px));
   margin: 2rem;
+  overflow: hidden;
 }
 .card-container .content-section {
   width: 100%;
@@ -29,6 +30,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  animation: show_left 1s ease-in-out backwards;
 }
 .card-container .content-section .title {
   font-size: 2.2rem;
@@ -68,6 +70,7 @@
   min-height: 100%;
   background-color: hsl(277deg, 64%, 61%);
   border-radius: 0 0.5rem 0.5rem 0;
+  animation: show_right 1s ease-in-out backwards;
 }
 .card-container .img-section .img-mobile {
   width: 100%;
@@ -111,6 +114,16 @@
   }
   .card-container .img-section .img-mobile {
     display: block;
+  }
+}
+@keyframes show_left {
+  from {
+    transform: translateX(200vh);
+  }
+}
+@keyframes show_right {
+  from {
+    transform: translateX(-200vh);
   }
 }
 

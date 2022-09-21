@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 554px));
   margin: 2rem;
-
+  overflow: hidden;
   // Content Section
   .content-section {
     width: 100%;
@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    animation: show_left 1s ease-in-out backwards;
 
     .title {
       font-size: 2.2rem;
@@ -64,6 +65,7 @@
     min-height: 100%;
     background-color: $soft-violet;
     border-radius: 0 $radius $radius 0;
+    animation: show_right 1s ease-in-out backwards;
 
     .img-mobile {
       width: 100%;
